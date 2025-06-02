@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="GestordeStock.View.Menu_Proveedores"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GestordeStock.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="470" d:DesignWidth="800">
+    <Grid Style="{StaticResource Background-grid}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" ></RowDefinition>
+            <RowDefinition Height="4*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--#region Titulo -->
+        <Label Name="Titulo" Content="Menu Proveedores" Style="{StaticResource Label:Menu}"></Label>
+        <!--#endregion-->
+        <!--#region Formulario:Menu-->
+        <Grid Grid.Row="1" >
+            <TextBlock x:Name="Rut_texblock" Text="Rut" Margin="90,10,630,150" Style="{StaticResource Text}"></TextBlock>
+            
+            <TextBox x:Name="Rut" Margin="145,5,0,145" PreviewTextInput="RUTTextBox_PreviewTextInput" TextChanged="RUTTextBox_TextChanged" HorizontalAlignment="Left"></TextBox>
+            
+            <TextBlock x:Name="Nombre_texblock" Text="Nombre" Margin="90,55,630,105" Style="{StaticResource Text}" ></TextBlock>
+            <TextBox x:Name="Nombre" Margin="145,50,0,100" HorizontalAlignment="Left" ></TextBox>
+            <TextBlock x:Name="Apellido_texblock" Text="Apellido" Margin="90,100,630,60" Style="{StaticResource Text}" ></TextBlock>
+            <TextBox x:Name="Apellido" Margin="145,95,0,55" HorizontalAlignment="Left" ></TextBox>
+            <TextBlock x:Name="Contacto_texblock" Text="Telefono" Margin="90,145,630,15" Style="{StaticResource Text}"></TextBlock>
+            <TextBox x:Name="Contacto" Margin="145,140,0,10" PreviewTextInput="Contacto_texblock_PreviewTextInput" HorizontalAlignment="Left" ></TextBox>
+            <TextBlock x:Name="Mail_texblock" Text="Mail" Margin="385,10,335,150" Style="{StaticResource Text}" ></TextBlock>
+            <TextBox x:Name="Mail" Margin="460,5,0,145" HorizontalAlignment="Left" ></TextBox>
+            <TextBlock x:Name="Descripcion_texblock" Text="Descripcion" Margin="385,55,335,105" Style="{StaticResource Text}" ></TextBlock>
+            <RichTextBox x:Name="Descripcion" Margin="460,55,90,45" Width="250" Height="80"></RichTextBox>
+
+            <Button x:Name="Cancelar" Content="Cancelar" Margin="0,140,-220,0" Click="Cancelar_Click"></Button>
+            <Button x:Name="Accion" Content="Agregar" Margin="520,140,0,0" Click="Accion_Click"></Button>
+        </Grid>
+        <!--#endregion-->
+        <!--#region Muestra Datos-->
+        <Grid Grid.Row="2">
+            <TextBlock x:Name="Buscar_proveedor_textblock" Text="Buscar Proveedor" Margin="0,0,300,190" Style="{StaticResource Text}" ></TextBlock>
+            <TextBox x:Name="Buscar_proveedor"  Margin="310,0,0,190" TextChanged="Buscar_proveedor_TextChanged"/>
+            <!--Watermark search -->
+            <TextBlock x:Name="watermark_text_search" Text="Ingrese nombre del proveedor" Margin="5,0,0,185" Style="{StaticResource watermark_search_Proveedor}"></TextBlock>
+            <Button x:Name="Buscar" Margin="260,0,0,190" Style="{StaticResource ButtonSearch}" Click="Buscar_Click">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <!-- Imagen -->
+                        <Image Source="/IMG/Search.png" Style="{StaticResource icon_Search}"/>
+                        <!-- Texto -->
+                        <TextBlock Text="Buscar" Style="{StaticResource Text_search}" />
+                    </StackPanel>
+                </Button.Content>
+            </Button>
+            <DataGrid x:Name="DGProveedor" d:IsLocked="True" ItemsSource="{Binding}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="colum_Nombre" Header="Nombre" Binding="{Binding NOMBRE_PROVEEDOR}"/>
+                    <DataGridTextColumn x:Name="colum_Rut" Header="RUT" Binding="{Binding RUT}"/>
+                    <DataGridTextColumn x:Name="colum_Telefono" Header="Telefono" Binding="{Binding TELEFONO}"/>
+                    <DataGridTextColumn x:Name="colum_Mail" Header="Mail" Binding="{Binding MAIL}"/>
+                    <DataGridTextColumn x:Name="colum_Descripcion" Header="Descripcion" Binding="{Binding DESCRIPCION}"/>
+                    <!-- Boton Imagenes in dataGrid -->
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Button x:Name="Actualizar" Style="{StaticResource ButtonDataGrid}" Click="Actualizar_Click" >
+                                        <Image Style="{StaticResource icon_datagrid}" Source="/Img/Upadte.png"/>
+                                    </Button>
+                                    <Button x:Name="Eliminadatos" Style="{StaticResource ButtonDataGrid}" Click="Eliminadatos_Click">
+                                        <Image Style="{StaticResource icon_datagrid}" Source="/Img/Delete.png" />
+                                    </Button>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+        <!--#endregion-->
+    </Grid>
+</UserControl>

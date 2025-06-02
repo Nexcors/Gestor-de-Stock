@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gestor_de_Stock"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Gestor de Stock" Height="490" Width="800"
+        ResizeMode="NoResize"
+        WindowStyle="None"     
+        >
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" ></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--#region Menu -->
+        <Grid Grid.Column="0" Style="{StaticResource Grid_menu}" MouseDown="Window_MouseDown">
+            <!--
+            <StackPanel Style="{StaticResource stackpanel_menu}">
+                <Button Content="Productos" Style="{StaticResource Button_menu}" Click="productos_Click"></Button>
+                <Button Content="Proveedores" Style="{StaticResource Button_menu}" Click="proveedores_Click"></Button>
+            </StackPanel>
+            -->
+            <Menu>
+                <MenuItem Name="productos" Header="Productos" Click="productos_Click"></MenuItem>
+                <MenuItem Name="proveedores" Header="Proveedores" Click="proveedores_Click" ></MenuItem>
+                <MenuItem Name="categorias" Header="Categorias Productos" Click="categorias_Click"></MenuItem>
+            </Menu>
+            <StackPanel Style="{StaticResource stackpanel_menubtn}">
+                <Button x:Name="Minimizar" Content="-" Style="{StaticResource Button_stackmenu}" Margin="30,0,0,0"  Click="Minimizar_Click"/>
+                <Button x:Name="Cerrar" Content="X" Style="{StaticResource Close}" Margin="5,0,0,0"  Click="Cerrar_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <!--#endregion-->
+      <!--#region Frame-->
+        <Grid x:Name="Muestramenus" Grid.Row="1" Grid.ColumnSpan="2"></Grid>
+        <!--#endregion-->
     </Grid>
 </Window>

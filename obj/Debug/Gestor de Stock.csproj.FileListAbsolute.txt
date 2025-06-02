@@ -1,0 +1,15 @@
+C:\Users\guill\source\repos\Gestor de Stock\bin\Debug\Gestor de Stock.exe.config
+C:\Users\guill\source\repos\Gestor de Stock\bin\Debug\Gestor de Stock.exe
+C:\Users\guill\source\repos\Gestor de Stock\bin\Debug\Gestor de Stock.pdb
+C:\Users\guill\source\repos\Gestor de Stock\obj\Debug\Gestor de Stock.csproj.AssemblyReference.cache
+C:\Users\guill\source\repos\Gestor de Stock\obj\Debug\View\MainWindow.g.cs
+C:\Users\guill\source\repos\Gestor de Stock\obj\Debug\App.g.cs
+C:\Users\guill\source\repos\Gestor de Stock\obj\Debug\Gestor de Stock_MarkupCompile.cache
+C:\Users\guill\source\repos\Gestor de Stock\obj\Debug\Gestor de Stock_MarkupCompile.lref
+C:\Users\guill\source\repos\Gestor de Stock\obj\Debug\View\MainWindow.baml
+C:\Users\guill\source\repos\Gestor de Stock\obj\Debug\Gestor de Stock.g.resources
+C:\Users\guill\source\repos\Gestor de Stock\obj\Debug\Gestor_de_Stock.Properties.Resources.resources
+C:\Users\guill\source\repos\Gestor de Stock\obj\Debug\Gestor de Stock.csproj.GenerateResource.cache
+C:\Users\guill\source\repos\Gestor de Stock\obj\Debug\Gestor de Stock.csproj.CoreCompileInputs.cache
+C:\Users\guill\source\repos\Gestor de Stock\obj\Debug\Gestor de Stock.exe
+C:\Users\guill\source\repos\Gestor de Stock\obj\Debug\Gestor de Stock.pdb

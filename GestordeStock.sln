@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gestor de Stock", "Gestor de Stock.csproj", "{53165C55-9614-4508-AD5C-CE36B60FDB09}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestordeStock", "GestordeStock.csproj", "{53165C55-9614-4508-AD5C-CE36B60FDB09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
